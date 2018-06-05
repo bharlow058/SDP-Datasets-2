@@ -1,0 +1,182 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%
+% This is a PROMISE Software Engineering Repository data set made publicly available
+% in order to encourage repeatable, refutable, verifiable, and/or 
+%improvable predictive models of software engineering.
+%
+%If you publish material based on PROMISE data sets then, please 
+%follow the acknowledgment guidelines posted on the PROMISE repository web page
+%http://promise.site.uottawa.ca/SERepository.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%-- Title: GSM10 /Software defect prediction
+%-- Date: January, 1st, 2009
+%-- Data from a GSM company, Istanbul, Turkey
+%-- Donated by: Software Research Laboratory (SOFTLAB), Bogazici University, Istanbul, Turkey
+%-- Website: http://softlab.boun.edu.tr
+%-- Contact address: ayse.tosun@boun.edu.tr, bener@boun.edu.tr
+%
+%Description:
+%-- Nine projects from application and presentation layers of the telecommunication software
+%   Name: GSM1,GSM2,GSM3,GSM4,GSM5,GSM6,GSM9,GSM10,GSM11
+%-- Ten releases from these projects are selected.
+%   {Release 1, ..., Release 10}
+%-- Package, File, Class and Method metrics are collected. 
+%   {PACKAGE Metrics, FILE Metrics, CLASS Metrics, METHOD Metrics}
+%-- Static code attributes and CK object oriented metrics are collected using Prest  Metrics Extraction and Analysis Tool [1]. 
+%
+%--An example of method level static code attributes are as follows:
+%@attribute 'Cyclometric Density' numeric
+%@attribute 'Decision Density' numeric
+%@attribute 'Essential Density' numeric
+%@attribute 'Branch Count' numeric
+%@attribute 'Condition Count' numeric
+%@attribute 'Cyclometric Complexity' numeric
+%@attribute 'Decision Count' numeric
+%@attribute 'Essential Complexity' numeric
+%@attribute 'LOC' numeric
+%@attribute 'Total Operands' numeric
+%@attribute 'Total Operators' numeric
+%@attribute 'Unique Operands Count' numeric
+%@attribute 'Unique Operators Count' numeric
+%@attribute 'Halstead Difficulty' numeric
+%@attribute 'Halstead Length' numeric
+%@attribute 'Halstead Level' numeric
+%@attribute 'Halstead Programming Effort' numeric
+%@attribute 'Halstead Programming Time' numeric
+%@attribute 'Halstead Volume' numeric
+%@attribute 'Maintenance Severity' numeric
+%@attribute 'Formal Parameters' numeric
+%@attribute 'Call Pair Length' numeric
+%
+%-- Object oriented metrics, collected in class level, are as follows:
+%@attribute 'Coupling Between Objects' numeric
+%@attribute 'Fan In' numeric
+%@attribute 'Number of Children' numeric
+%@attribute 'Percentage of Pub Data' numeric
+%@attribute 'Response for Class' numeric
+%@attribute 'Weighted Methods' numeric
+%
+%-- Defects can only be matched with file ID's. Therefore, pre-release test defects with file ID's are 
+%represented in the corresponding xls file of the projects (test defects.xls). 
+%
+%-- Each project has been implemented/changed in different releases. Moreover, each release does not 
+%necessarily contain all projects which has defect logs. Therefore, projects have different releases 
+%in their seperate folders.
+
+%[1] Prest Metrics Extraction and Analysis Tool, available at http://softlab.boun.edu.tr/?q=resources&i=tools.
+
+@relation gsm10_class_release6
+
+@attribute 'Class Id' numeric
+@attribute 'Cyclometric Density' numeric
+@attribute 'Decision Density' numeric
+@attribute 'Essential Density' numeric
+@attribute 'Branch Count' numeric
+@attribute 'Condition Count' numeric
+@attribute 'Cyclometric Complexity' numeric
+@attribute 'Decision Count' numeric
+@attribute 'Essential Complexity' numeric
+@attribute 'LOC' numeric
+@attribute 'Total Operands' numeric
+@attribute 'Total Operators' numeric
+@attribute 'Unique Operands Count' numeric
+@attribute 'Unique Operators Count' numeric
+@attribute 'Halstead Difficulty' numeric
+@attribute 'Halstead Length' numeric
+@attribute 'Halstead Level' numeric
+@attribute 'Halstead Programming Effort' numeric
+@attribute 'Halstead Programming Time' numeric
+@attribute 'Halstead Volume' numeric
+@attribute 'Maintenance Severity' numeric
+@attribute 'Coupling Between Objects' numeric
+@attribute 'Fan In' numeric
+@attribute 'Number of Children' numeric
+@attribute 'Percentage of Pub Data' numeric
+@attribute 'Response for Class' numeric
+@attribute 'Weighted Methods' numeric
+@attribute 'Defected?(false/true) ' {FALSE,TRUE}
+
+@data
+15790,34,1.56,0.61,16,25,3.68,16,21,125,70,77,36,10,10,147,0.1,1.7,0.09,0.17,0.62,0,0,0,0,8,8,FALSE
+15804,7,0,1,0,0,4.71,0,7,33,5,4,4,2,1.25,9,0.8,0.78,0.04,0.62,1,1,0,0,0,2,2,FALSE
+15807,3,0,0.5,1,0,4,0,2,12,1,2,1,2,1,3,1,0.48,0.03,0.48,0.67,0,1,0,0,1,1,FALSE
+15814,9,1,0.88,1,1,3.44,1,8,31,26,13,18,5,3.57,39,0.28,1.36,0.08,0.38,0.89,0,1,0,0,1,1,FALSE
+15818,11,0,1,0,0,6.45,0,11,71,18,11,12,4,3.03,29,0.33,1.21,0.07,0.4,1,0,1,0,50,1,1,FALSE
+15821,17,1.13,0.06,15,17,2.71,15,2,46,66,41,33,10,10,107,0.1,1.6,0.09,0.16,0.12,0,0,0,0,1,1,FALSE
+15824,9,1,0.88,1,1,3.89,1,8,35,42,22,20,7,7.14,64,0.14,1.43,0.08,0.2,0.89,0,1,0,0,1,1,FALSE
+15828,9,1,0.88,1,1,2.89,1,8,26,26,13,17,4,3.03,39,0.33,1.33,0.07,0.44,0.89,0,1,0,0,1,1,FALSE
+15832,9,1,0.88,1,1,2.89,1,8,26,26,13,17,4,3.03,39,0.33,1.33,0.07,0.44,0.89,0,1,0,0,1,1,FALSE
+15837,27,2,0.96,1,2,2.41,1,26,65,41,38,25,6,5,79,0.2,1.5,0.08,0.3,0.96,5,0,0,0,9,9,FALSE
+15852,20,1.67,0.68,6,5,4.05,3,14,81,29,35,19,9,6.67,64,0.15,1.47,0.08,0.22,0.7,0,0,0,0,6,6,FALSE
+15866,8,0,1,0,0,3.88,0,8,31,50,26,27,4,3.7,76,0.27,1.48,0.08,0.4,1,0,1,0,0,1,1,FALSE
+15870,8,0,1,0,0,4.88,0,8,39,70,34,35,4,4,104,0.25,1.6,0.09,0.4,1,0,1,0,0,1,1,FALSE
+15874,10,1.8,0.44,5,9,4.8,5,5,48,32,26,16,8,8.33,58,0.12,1.42,0.08,0.17,0.5,0,0,0,0,2,2,FALSE
+15878,21,0,1,0,0,2.71,0,21,57,88,28,22,4,8.33,116,0.12,1.42,0.08,0.17,1,0,1,0,100,7,7,FALSE
+15888,9,0,1,0,0,2.33,0,9,21,18,10,12,4,3.03,28,0.33,1.21,0.07,0.4,1,0,1,0,100,1,1,FALSE
+15892,9,0,1,0,0,2.44,0,9,22,18,10,12,4,3.03,28,0.33,1.21,0.07,0.4,1,0,1,0,100,1,1,FALSE
+15896,9,0,1,0,0,2.56,0,9,23,17,10,11,4,3.12,27,0.32,1.19,0.07,0.38,1,0,1,0,100,1,1,FALSE
+15900,24,2.23,0.3,14,29,5.5,13,8,132,199,147,86,16,20,346,0.05,2,0.11,0.1,0.33,0,0,3,0,4,4,FALSE
+15906,23,1.91,0.5,11,21,5.22,11,12,120,162,138,63,12,16.67,300,0.06,1.83,0.1,0.11,0.52,0,1,0,100,1,1,FALSE
+15910,9,0,1,0,0,2.44,0,9,22,16,10,11,4,2.94,26,0.34,1.18,0.07,0.4,1,0,1,0,100,1,1,FALSE
+15914,10,0,1,0,0,7.3,0,10,73,23,11,13,4,3.57,34,0.28,1.21,0.07,0.34,1,0,0,0,100,1,1,FALSE
+15917,9,1.86,0.12,7,13,5.33,7,2,48,40,33,24,9,7.69,73,0.13,1.54,0.09,0.2,0.22,0,0,0,0,1,1,FALSE
+15920,10,0,1,0,0,7.4,0,10,74,23,11,14,4,3.33,34,0.3,1.27,0.07,0.38,1,0,0,0,100,1,1,FALSE
+15923,9,1.86,0.12,7,13,5.44,7,2,49,40,33,24,9,7.69,73,0.13,1.54,0.09,0.2,0.22,0,0,0,0,1,1,FALSE
+15926,10,0,1,0,0,5.2,0,10,52,18,10,12,4,3.03,28,0.33,1.21,0.07,0.4,1,0,1,0,100,1,1,FALSE
+15929,4,1,0.33,2,1,7.25,1,2,29,26,16,21,6,3.7,42,0.27,1.44,0.08,0.39,0.5,1,0,0,0,1,1,FALSE
+15932,13,2,0.58,5,10,4.08,5,8,53,66,38,23,5,7.14,104,0.14,1.43,0.08,0.2,0.62,0,1,0,0,1,1,FALSE
+15937,6,0,1,0,0,2.33,0,6,14,4,4,3,2,1.33,8,0.75,0.69,0.04,0.52,1,0,0,2,100,2,2,FALSE
+15941,11,0,1,0,0,2.27,0,11,25,10,8,7,3,2.13,18,0.47,1,0.06,0.47,1,2,0,0,0,4,4,FALSE
+15947,33,0,1,0,0,2.64,0,33,87,40,31,34,3,1.75,71,0.57,1.56,0.09,0.89,1,7,0,0,0,13,13,FALSE
+15962,13,2,0.92,1,2,6.77,1,12,88,16,10,8,5,5,26,0.2,1.1,0.06,0.22,0.92,1,0,0,0,5,5,FALSE
+15966,8,2,0.14,6,12,5.25,6,2,42,39,31,24,8,6.67,70,0.15,1.53,0.08,0.23,0.25,0,0,0,0,1,1,FALSE
+15972,52,1.71,0.73,14,24,1.92,14,38,100,95,89,30,12,20,184,0.05,1.6,0.09,0.08,0.73,1,2,0,0,15,15,FALSE
+15989,72,0,1,0,0,2.06,0,72,148,70,56,16,3,6.67,126,0.15,1.27,0.07,0.19,1,0,2,0,0,28,28,FALSE
+16020,45,0,1,0,0,1.6,0,45,72,27,27,9,3,4.55,54,0.22,1.09,0.06,0.24,1,0,1,0,0,18,18,FALSE
+16040,57,0,1,0,0,1.39,0,57,79,30,30,10,3,4.55,60,0.22,1.14,0.06,0.25,1,0,1,0,0,20,20,FALSE
+16062,35,0,1,0,0,1.57,0,35,55,21,21,7,3,4.55,42,0.22,1,0.06,0.22,1,0,1,1,0,14,14,FALSE
+16078,35,0,1,0,0,1.54,0,35,54,21,21,7,3,4.55,42,0.22,1,0.06,0.22,1,0,1,0,0,14,14,FALSE
+16094,45,0,1,0,0,1.53,0,45,69,27,27,9,3,4.55,54,0.22,1.09,0.06,0.24,1,0,1,0,0,18,18,FALSE
+16114,30,0,1,0,0,1.6,0,30,48,18,18,6,3,4.55,36,0.22,0.96,0.05,0.21,1,0,1,0,0,12,12,FALSE
+16128,15,0,1,0,0,1.93,0,15,29,9,9,3,3,4.55,18,0.22,0.77,0.04,0.17,1,0,1,0,0,6,6,FALSE
+16136,50,0,1,0,0,1.54,0,50,77,31,31,11,3,4.17,62,0.24,1.17,0.06,0.28,1,0,1,0,0,20,20,FALSE
+16158,12,0,1,0,0,2,0,12,24,10,10,2,3,7.69,20,0.13,0.69,0.04,0.09,1,0,0,0,0,4,4,FALSE
+16175,23,2.62,0.5,9,21,3.65,8,12,84,52,62,31,16,14.29,114,0.07,1.71,0.1,0.12,0.52,1,0,0,0,5,5,FALSE
+16182,7,0,1,0,0,2.43,0,7,17,4,4,2,3,3.03,8,0.33,0.7,0.04,0.23,1,0,0,0,0,3,3,FALSE
+16187,153,1.72,0.5,67,112,3.93,65,77,601,411,400,168,23,25,811,0.04,2.25,0.12,0.09,0.5,2,0,0,0,33,33,FALSE
+16222,31,1.4,0.63,11,14,4.48,10,20,139,86,103,35,16,20,189,0.05,1.8,0.1,0.09,0.65,0,0,0,0,8,8,FALSE
+16232,191,1.88,0.51,80,128,3.73,68,97,712,503,517,192,27,33.33,1020,0.03,2.33,0.13,0.07,0.51,1,0,0,0,38,38,FALSE
+16272,42,2.5,0.73,8,20,2.81,8,31,118,71,74,27,12,16.67,145,0.06,1.67,0.09,0.1,0.74,0,0,0,0,12,12,FALSE
+16296,10,2,0.89,1,2,3.8,1,9,38,27,24,20,8,5.26,51,0.19,1.42,0.08,0.27,0.9,1,0,0,0,3,3,FALSE
+16379,46,1.61,0.58,18,29,4.85,18,27,223,275,198,104,15,20,473,0.05,2,0.11,0.1,0.59,1,0,0,0,9,9,FALSE
+16390,30,1.25,0.72,8,10,4.03,8,22,121,114,80,61,6,5.56,194,0.18,1.83,0.1,0.33,0.73,1,0,0,0,7,7,FALSE
+16399,57,2.35,0.45,22,47,3.79,20,26,216,216,203,100,20,20,419,0.05,2,0.11,0.1,0.46,3,0,0,0,9,9,FALSE
+16410,27,1.45,0.46,11,16,4.63,11,13,125,178,90,89,10,10,268,0.1,2,0.11,0.2,0.48,1,0,0,0,6,6,FALSE
+16418,26,1.82,0.52,11,20,3.96,11,14,103,91,95,58,15,12.5,186,0.08,1.88,0.1,0.15,0.54,2,0,0,0,5,5,FALSE
+16425,18,1.88,0.53,8,15,4.22,8,10,76,61,62,36,14,12.5,123,0.08,1.75,0.1,0.14,0.56,2,0,0,0,4,4,FALSE
+16431,20,1.5,0.68,6,9,3.6,6,14,72,41,40,23,10,9.09,81,0.11,1.55,0.09,0.17,0.7,1,0,0,0,5,5,FALSE
+16438,10,2,0.44,4,8,3.3,4,5,33,27,23,15,7,6.25,50,0.16,1.31,0.07,0.21,0.5,0,0,0,0,2,2,FALSE
+16442,5,0,1,0,0,4,0,5,20,8,6,7,3,1.72,14,0.58,1,0.06,0.58,1,0,0,0,0,2,2,FALSE
+16446,31,1.58,0.4,19,30,4.26,19,13,132,93,83,38,16,20,176,0.05,1.8,0.1,0.09,0.42,0,0,0,0,4,4,FALSE
+16452,6,2,0.8,1,2,3.67,1,5,22,13,9,10,5,3.23,22,0.31,1.16,0.06,0.36,0.83,0,0,0,0,2,2,FALSE
+16456,18,2.5,0.82,2,5,3.83,2,15,69,33,35,21,10,7.69,68,0.13,1.46,0.08,0.19,0.83,1,0,0,0,6,6,FALSE
+16302,10,0,1,0,0,1.9,0,10,19,6,6,2,3,4.55,12,0.22,0.68,0.04,0.15,1,0,1,0,0,4,4,FALSE
+16308,30,0,1,0,0,1.57,0,30,47,18,18,6,3,4.55,36,0.22,0.96,0.05,0.21,1,0,0,0,0,12,12,FALSE
+16322,67,0,1,0,0,1.7,0,67,114,80,54,29,3,4.17,134,0.24,1.5,0.08,0.36,1,0,5,0,0,27,27,FALSE
+16351,10,0,1,0,0,1.9,0,10,19,6,6,2,3,4.55,12,0.22,0.68,0.04,0.15,1,0,0,0,0,4,4,FALSE
+16357,10,0,1,0,0,2.6,0,10,26,7,7,3,3,3.45,14,0.29,0.79,0.04,0.23,1,0,1,0,0,4,4,FALSE
+16363,10,0,1,0,0,2.4,0,10,24,6,6,2,3,4.55,12,0.22,0.68,0.04,0.15,1,0,0,0,0,4,4,FALSE
+16369,20,0,1,0,0,1.75,0,20,35,12,12,4,3,4.55,24,0.22,0.86,0.05,0.19,1,0,1,0,0,8,8,FALSE
+16465,31,2.62,0.1,16,42,2.48,16,4,77,84,94,45,13,12.5,178,0.08,1.75,0.1,0.14,0.13,1,0,0,0,2,2,FALSE
+16470,118,1.84,0.65,38,59,3.88,32,77,458,446,317,188,27,33.33,763,0.03,2.33,0.13,0.07,0.65,0,0,0,0,24,24,FALSE
+16497,116,1.75,0.64,38,56,3.66,32,75,424,396,266,163,18,20,662,0.05,2.2,0.12,0.11,0.65,0,0,0,0,26,26,FALSE
+16526,163,1.74,0.77,38,59,3.24,34,125,528,516,288,192,20,25,804,0.04,2.25,0.12,0.09,0.77,0,0,0,0,40,40,FALSE
+16570,7,0,1,0,0,4.14,0,7,29,24,18,21,4,2.27,42,0.44,1.41,0.08,0.62,1,1,0,0,0,3,3,FALSE
+16575,45,0,1,0,0,2.6,0,45,117,67,54,48,5,3.45,121,0.29,1.72,0.1,0.5,1,1,0,0,0,18,18,FALSE
+16595,5,0,1,0,0,2.8,0,5,14,4,5,3,4,2.63,9,0.38,0.84,0.05,0.32,1,0,0,0,0,2,2,FALSE
+16599,18,1,0.88,2,1,3.28,1,16,59,51,42,40,8,5,93,0.2,1.7,0.09,0.34,0.89,1,0,0,0,6,6,FALSE
+16608,40,0,1,0,0,1.88,0,40,75,24,24,8,3,4.55,48,0.22,1.05,0.06,0.23,1,0,3,0,0,16,16,FALSE
+16627,30,2.5,0.55,8,20,3.33,8,17,100,101,77,54,16,14.29,178,0.07,1.86,0.1,0.13,0.57,0,0,0,0,6,6,FALSE
+16635,2,0,1,0,0,9.5,0,2,19,25,5,21,1,0.6,30,1.68,1.36,0.08,2.26,1,0,0,0,0,1,1,FALSE
+16644,12,2,0.73,3,4,3.92,2,9,47,47,50,23,15,14.29,97,0.07,1.57,0.09,0.11,0.75,0,0,0,0,4,4,FALSE

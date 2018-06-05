@@ -1,0 +1,101 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%
+% This is a PROMISE Software Engineering Repository data set made publicly available
+% in order to encourage repeatable, refutable, verifiable, and/or 
+%improvable predictive models of software engineering.
+%
+%If you publish material based on PROMISE data sets then, please 
+%follow the acknowledgment guidelines posted on the PROMISE repository web page
+%http://promise.site.uottawa.ca/SERepository.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%-- Title: GSM6 /Software defect prediction
+%-- Date: January, 1st, 2009
+%-- Data from a GSM company, Istanbul, Turkey
+%-- Donated by: Software Research Laboratory (SOFTLAB), Bogazici University, Istanbul, Turkey
+%-- Website: http://softlab.boun.edu.tr
+%-- Contact address: ayse.tosun@boun.edu.tr, bener@boun.edu.tr
+%
+%Description:
+%-- Nine projects from application and presentation layers of the telecommunication software
+%   Name: GSM1,GSM2,GSM3,GSM4,GSM5,GSM6,GSM9,GSM10,GSM11
+%-- Ten releases from these projects are selected.
+%   {Release 1, ..., Release 10}
+%-- Package, File, Class and Method metrics are collected. 
+%   {PACKAGE Metrics, FILE Metrics, CLASS Metrics, METHOD Metrics}
+%-- Static code attributes and CK object oriented metrics are collected using Prest  Metrics Extraction and Analysis Tool [1]. 
+%
+%--An example of method level static code attributes are as follows:
+%@attribute 'Cyclometric Density' numeric
+%@attribute 'Decision Density' numeric
+%@attribute 'Essential Density' numeric
+%@attribute 'Branch Count' numeric
+%@attribute 'Condition Count' numeric
+%@attribute 'Cyclometric Complexity' numeric
+%@attribute 'Decision Count' numeric
+%@attribute 'Essential Complexity' numeric
+%@attribute 'LOC' numeric
+%@attribute 'Total Operands' numeric
+%@attribute 'Total Operators' numeric
+%@attribute 'Unique Operands Count' numeric
+%@attribute 'Unique Operators Count' numeric
+%@attribute 'Halstead Difficulty' numeric
+%@attribute 'Halstead Length' numeric
+%@attribute 'Halstead Level' numeric
+%@attribute 'Halstead Programming Effort' numeric
+%@attribute 'Halstead Programming Time' numeric
+%@attribute 'Halstead Volume' numeric
+%@attribute 'Maintenance Severity' numeric
+%@attribute 'Formal Parameters' numeric
+%@attribute 'Call Pair Length' numeric
+%
+%-- Object oriented metrics, collected in class level, are as follows:
+%@attribute 'Coupling Between Objects' numeric
+%@attribute 'Fan In' numeric
+%@attribute 'Number of Children' numeric
+%@attribute 'Percentage of Pub Data' numeric
+%@attribute 'Response for Class' numeric
+%@attribute 'Weighted Methods' numeric
+%
+%-- Defects can only be matched with file ID's. Therefore, pre-release test defects with file ID's are 
+%represented in the corresponding xls file of the projects (test defects.xls). 
+%
+%-- Each project has been implemented/changed in different releases. Moreover, each release does not 
+%necessarily contain all projects which has defect logs. Therefore, projects have different releases 
+%in their seperate folders.
+
+%[1] Prest Metrics Extraction and Analysis Tool, available at http://softlab.boun.edu.tr/?q=resources&i=tools.
+
+@relation gsm6_package_release4
+
+@attribute 'Package Id' numeric
+@attribute 'Cyclometric Density' numeric
+@attribute 'Decision Density' numeric
+@attribute 'Essential Density' numeric
+@attribute 'Branch Count' numeric
+@attribute 'Condition Count' numeric
+@attribute 'Cyclometric Complexity' numeric
+@attribute 'Decision Count' numeric
+@attribute 'Essential Complexity' numeric
+@attribute 'LOC' numeric
+@attribute 'Total Operands' numeric
+@attribute 'Total Operators' numeric
+@attribute 'Unique Operands Count' numeric
+@attribute 'Unique Operators Count' numeric
+@attribute 'Halstead Difficulty' numeric
+@attribute 'Halstead Length' numeric
+@attribute 'Halstead Level' numeric
+@attribute 'Halstead Programming Effort' numeric
+@attribute 'Halstead Programming Time' numeric
+@attribute 'Halstead Volume' numeric
+@attribute 'Maintenance Severity' numeric
+@attribute Defected?(false/true) {FALSE,TRUE}
+
+@data
+0,399,1.69,0.47,207,147,5.75,87,188,2293,1693,1357,467,27,50,3050,0.02,2.5,0.14,0.05,0.47,FALSE
+92,185,1,0.98,3,3,2.68,3,182,496,112,110,50,6,6.67,222,0.15,1.73,0.1,0.26,0.98,FALSE
+182,263,1.57,0.81,44,44,3.19,28,213,838,400,417,201,21,20,817,0.05,2.4,0.13,0.12,0.81,FALSE
+268,176,0,1,0,0,2.51,0,176,441,55,65,18,3,4.55,120,0.22,1.32,0.07,0.29,1,FALSE
+353,1198,1.62,0.44,715,649,5.61,401,533,6716,5267,4646,1288,34,100,9913,0.01,3,0.17,0.03,0.44,FALSE
+581,21,2.22,0.45,11,20,5.62,9,10,118,63,74,29,17,20,137,0.05,1.6,0.09,0.08,0.48,FALSE
+590,28,1,0.78,6,2,5.25,2,22,147,77,83,30,9,11.11,160,0.09,1.56,0.09,0.14,0.79,FALSE

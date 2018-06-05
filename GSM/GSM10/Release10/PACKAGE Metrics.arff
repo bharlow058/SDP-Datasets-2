@@ -1,0 +1,119 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%
+% This is a PROMISE Software Engineering Repository data set made publicly available
+% in order to encourage repeatable, refutable, verifiable, and/or 
+%improvable predictive models of software engineering.
+%
+%If you publish material based on PROMISE data sets then, please 
+%follow the acknowledgment guidelines posted on the PROMISE repository web page
+%http://promise.site.uottawa.ca/SERepository.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%-- Title: GSM10 /Software defect prediction
+%-- Date: January, 1st, 2009
+%-- Data from a GSM company, Istanbul, Turkey
+%-- Donated by: Software Research Laboratory (SOFTLAB), Bogazici University, Istanbul, Turkey
+%-- Website: http://softlab.boun.edu.tr
+%-- Contact address: ayse.tosun@boun.edu.tr, bener@boun.edu.tr
+%
+%Description:
+%-- Nine projects from application and presentation layers of the telecommunication software
+%   Name: GSM1,GSM2,GSM3,GSM4,GSM5,GSM6,GSM9,GSM10,GSM11
+%-- Ten releases from these projects are selected.
+%   {Release 1, ..., Release 10}
+%-- Package, File, Class and Method metrics are collected. 
+%   {PACKAGE Metrics, FILE Metrics, CLASS Metrics, METHOD Metrics}
+%-- Static code attributes and CK object oriented metrics are collected using Prest  Metrics Extraction and Analysis Tool [1]. 
+%
+%--An example of method level static code attributes are as follows:
+%@attribute 'Cyclometric Density' numeric
+%@attribute 'Decision Density' numeric
+%@attribute 'Essential Density' numeric
+%@attribute 'Branch Count' numeric
+%@attribute 'Condition Count' numeric
+%@attribute 'Cyclometric Complexity' numeric
+%@attribute 'Decision Count' numeric
+%@attribute 'Essential Complexity' numeric
+%@attribute 'LOC' numeric
+%@attribute 'Total Operands' numeric
+%@attribute 'Total Operators' numeric
+%@attribute 'Unique Operands Count' numeric
+%@attribute 'Unique Operators Count' numeric
+%@attribute 'Halstead Difficulty' numeric
+%@attribute 'Halstead Length' numeric
+%@attribute 'Halstead Level' numeric
+%@attribute 'Halstead Programming Effort' numeric
+%@attribute 'Halstead Programming Time' numeric
+%@attribute 'Halstead Volume' numeric
+%@attribute 'Maintenance Severity' numeric
+%@attribute 'Formal Parameters' numeric
+%@attribute 'Call Pair Length' numeric
+%
+%-- Object oriented metrics, collected in class level, are as follows:
+%@attribute 'Coupling Between Objects' numeric
+%@attribute 'Fan In' numeric
+%@attribute 'Number of Children' numeric
+%@attribute 'Percentage of Pub Data' numeric
+%@attribute 'Response for Class' numeric
+%@attribute 'Weighted Methods' numeric
+%
+%-- Defects can only be matched with file ID's. Therefore, pre-release test defects with file ID's are 
+%represented in the corresponding xls file of the projects (test defects.xls). 
+%
+%-- Each project has been implemented/changed in different releases. Moreover, each release does not 
+%necessarily contain all projects which has defect logs. Therefore, projects have different releases 
+%in their seperate folders.
+
+%[1] Prest Metrics Extraction and Analysis Tool, available at http://softlab.boun.edu.tr/?q=resources&i=tools.
+
+@relation gsm10_package_release10
+
+@attribute 'Package Id' numeric
+@attribute 'Cyclometric Density' numeric
+@attribute 'Decision Density' numeric
+@attribute 'Essential Density' numeric
+@attribute 'Branch Count' numeric
+@attribute 'Condition Count' numeric
+@attribute 'Cyclometric Complexity' numeric
+@attribute 'Decision Count' numeric
+@attribute 'Essential Complexity' numeric
+@attribute 'LOC' numeric
+@attribute 'Total Operands' numeric
+@attribute 'Total Operators' numeric
+@attribute 'Unique Operands Count' numeric
+@attribute 'Unique Operators Count' numeric
+@attribute 'Halstead Difficulty' numeric
+@attribute 'Halstead Length' numeric
+@attribute 'Halstead Level' numeric
+@attribute 'Halstead Programming Effort' numeric
+@attribute 'Halstead Programming Time' numeric
+@attribute 'Halstead Volume' numeric
+@attribute 'Maintenance Severity' numeric
+@attribute Defected?(false/true) {FALSE,TRUE}
+
+@data
+86364,34,1.56,0.61,16,25,4.32,16,21,147,70,77,36,10,10,147,0.1,1.7,0.09,0.17,0.62,FALSE
+86375,0,0,1,0,0,0,0,0,16,0,0,0,0,0,0,0,0,0,0,0,FALSE
+86378,10,0,0.89,1,0,4.7,0,9,47,6,6,5,4,2.38,12,0.42,0.95,0.05,0.4,0.9,FALSE
+86385,0,0,1,0,0,0,0,0,20,0,0,0,0,0,0,0,0,0,0,0,FALSE
+86388,64,1.11,0.7,19,21,4.19,19,45,268,204,113,81,11,14.29,317,0.07,2,0.11,0.14,0.7,FALSE
+86411,27,2,0.96,1,2,3.26,1,26,88,41,38,25,6,5,79,0.2,1.5,0.08,0.3,0.96,FALSE
+86423,0,0,1,0,0,0,0,0,20,0,0,0,0,0,0,0,0,0,0,0,FALSE
+86426,20,1.67,0.68,6,5,4.95,3,14,99,29,35,19,9,6.67,64,0.15,1.47,0.08,0.22,0.7,FALSE
+86435,0,0,1,0,0,0,0,0,58,0,0,0,0,0,0,0,0,0,0,0,FALSE
+86440,244,1.87,0.76,56,101,5.28,54,186,1288,1133,720,410,20,25,1853,0.04,2.75,0.15,0.11,0.76,FALSE
+86533,83,2,0.91,7,14,3.64,7,76,302,123,96,77,8,6.25,219,0.16,1.94,0.11,0.31,0.92,FALSE
+86572,635,1.71,0.98,14,24,1.91,14,621,1213,542,493,134,12,25,1035,0.04,2.25,0.12,0.09,0.98,FALSE
+86852,0,0,1,0,0,0,0,0,180,0,0,0,0,0,0,0,0,0,0,0,FALSE
+86859,464,1.87,0.55,179,304,4.08,163,255,1895,1155,1192,368,29,50,2347,0.02,2.5,0.14,0.05,0.55,FALSE
+86982,0,0,1,0,0,0,0,0,43,0,0,0,0,0,0,0,0,0,0,0,FALSE
+86985,370,1.74,0.56,144,243,5.28,140,209,1955,1706,1257,479,25,50,2963,0.02,2.5,0.14,0.05,0.56,FALSE
+86991,157,0,1,0,0,2.02,0,157,317,135,109,46,3,4.35,244,0.23,1.7,0.09,0.39,1,FALSE
+87144,47,1.52,0.48,27,41,5.49,27,23,258,190,165,68,17,25,355,0.04,2,0.11,0.08,0.49,FALSE
+87182,31,2.62,0.1,16,42,2.81,16,4,87,84,94,45,13,12.5,178,0.08,1.75,0.1,0.14,0.13,FALSE
+87187,397,1.78,0.7,114,174,3.89,98,277,1543,1356,870,368,30,50,2226,0.02,2.5,0.14,0.05,0.7,FALSE
+87287,92,1.88,0.88,11,15,4.67,8,81,430,257,199,125,16,16.67,456,0.06,2.17,0.12,0.13,0.88,FALSE
+87329,41,0,1,0,0,1.9,0,41,78,24,24,8,3,4.55,48,0.22,1.05,0.06,0.23,1,FALSE
+87348,0,0,1,0,0,0,0,0,24,0,0,0,0,0,0,0,0,0,0,0,FALSE
+87351,47,2.4,0.67,10,24,4.87,10,32,229,167,113,75,20,25,280,0.04,2,0.11,0.08,0.68,FALSE
+87373,12,2,0.73,3,4,4.17,2,9,50,47,50,23,15,14.29,97,0.07,1.57,0.09,0.11,0.75,FALSE
